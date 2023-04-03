@@ -4,6 +4,72 @@
     box-sizing: border-box;
 }
 body{
-  background: linear-gradient(to bottom, #1d9688 20%, #d9dbd3 20% 100%);
+  background: linear-gradient(to bottom, #009688 20%, #d9dbd3 20% 100%);
   height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+#app{
+  width: 90%;
+  min-width: 600px;
+  height: 90%;
+  display: flex;
+}
+
+.avatar{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.span-sidebar{
+font-size: 15px;
+font-weight: bolder;
+}
+.avatar img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+i{
+  cursor: pointer;
+}
+.chat-header-right{
+  width: 20px;
+  height: 20px;
+  margin: 5px 60px;
+  color: rgb(139, 134, 134);
+  display: flex;
+}
+
+.chat-header-right i{
+  padding-left: 15px;
+}.notifications {
+  display: flex;
+  align-items: center;
+  background-color: #8edafb;
+  padding: 13px;
+}
+.bell-icon {
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.bell-icon i {
+  line-height: 45px;
+}
+.notifications-message a {
+  color: rgba(114, 114, 114, 0.829);
+  text-decoration: underline;
 }
