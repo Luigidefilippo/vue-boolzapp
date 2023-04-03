@@ -217,4 +217,26 @@ i{
   padding: 5px 10px;
 }
 
+/* CSS MESSAG SENT AND RECEIVED */
+.sent{
+  font-size: 14px;
+  padding: 8px 10px;
+  width: fit-content;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+.received{
+  margin-left: auto;
+  background-color:  #dcf8c6;
+  font-size: 14px;
+  padding: 8px 10px;
+  width: fit-content;
+  border-radius: 8px;
+ 
+  margin-bottom: 30px;
+}
+
+
 

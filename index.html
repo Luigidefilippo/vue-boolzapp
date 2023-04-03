@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- VUE.JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>Boolzapp-web</title>
+    <title>Boolzapp-Web</title>
 </head>
 <body>
     <div id="app">
@@ -38,15 +38,19 @@
                     <a href="#">Attiva notifiche despktop</a>
                 </div>
             </div>
+
+            <!-- SEARCK SIDEBAR -->
+
             <div class="serch-sidebar">
                 <div class="serch-sidebar-container">
-                    <input type="text" placeholder="Cerca tra i tuoi contatti">
+                    <input type="text" placeholder="Cerca tra i tuoi contatti" v-model="searchContact" @keyup="filterChat">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
             <!-- add chats -->
             <div class="chats-sidebar">
-                <div class="contact-chat" v-for="contact in contacts ">
+                <template v-for="(contact, index) in contacts">
+                <div class="contact-chat" @click="activeCoversation(index)" v-if="contact.visible == true">
                     <div class="chat-avatar">
                         <img :src="contact.avatar" alt="">
                     </div>
@@ -55,6 +59,7 @@
                         <p>Ultimo accesso 03/03/2022</p>
                     </div>
                 </div>
+            </template>
             </div>
         </div>
         <!-- SECTION MESSAGE -->
@@ -62,10 +67,10 @@
             <div class="avatar-top">
                 <div class="chat-title">
                     <div class="avatar">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="contacts[activeIndex].avatar" alt="">
                     </div>
                     <div class="visual-user">
-                        <h4>Lorendo Bertelli</h4>
+                        <h4>{{contacts[activeIndex].name}}</h4>
                         <p>Online</p>
                     </div>
                 </div>
@@ -78,10 +83,13 @@
                 </div>
             </div>
             <div class="message-content">
-                <p class="chat-message">Lorem ipsum dolor sit amet. <span class="chat-time-messagge">00:00</span></p>
-                <p class="chat-message-send">Lorem ipsum dolor sit amet. <span class="chat-time-messagge">00:00</span></p>
-                <p class="chat-message">Lorem ipsum dolor sit amet. <span class="chat-time-messagge">00:00</span></p>
-                <p class="chat-message-send">Lorem ipsum dolor sit amet. <span class="chat-time-messagge">00:00</span></p>
+                <div v-for="message in contacts[activeIndex].messages">
+                    <div :class="message.status">
+                        <span>{{message.message}}</span> 
+                    
+                        <span class="chat-time-messagge">{{message.hour}}</span> 
+                    </div>
+                </div>
             </div>
 
             <!-- CHAT FOOTER -->

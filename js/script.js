@@ -4,6 +4,10 @@ const DateTime = luxon.DateTime;
 createApp({
     data(){
         return{
+            activeIndex: 0,
+
+
+
             contacts: [
                 {
                     name: 'Michele',
@@ -172,6 +176,11 @@ createApp({
     },
 
     methods: {
+        
+  activeCoversation(index) {
+      this.activeIndex = index;
+
+    },
 
     },
 }).mount("#app")
