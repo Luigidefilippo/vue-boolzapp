@@ -5,6 +5,8 @@ createApp({
     data(){
         return{
             activeIndex: 0,
+            searchContact: '',
+            
 
 
 
@@ -181,6 +183,16 @@ createApp({
       this.activeIndex = index;
 
     },
+
+    filterChat() {
+        this.contacts.forEach((element) => {
+          if (element.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+            element.visible = true;
+          } else {
+            element.visible = false;
+          }
+        });
+      },
 
     },
 }).mount("#app")
