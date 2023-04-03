@@ -103,3 +103,35 @@ i{
   outline: none;
   margin-left: 20px;
 }
+.chats-sidebar{
+  /* height: calc(100vh - 115px); */
+  overflow-y: scroll;
+  background-color: white;
+}
+.chat-avatar{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.contact-chat{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 12px;
+  width: 100%;
+}
+.contact-chat:hover{
+  background-color: #e5e1e1;
+}
+.chat-info{
+  margin-left: 15px;
+  flex: 10;
+}
+.chat-info p{
+  font-size: 13px;
+  line-height: 20px;
+  color: #888;
+}
