@@ -11,7 +11,7 @@ createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: '_1',
+                    avatar: '_15',
                     visible: true,
                     messages: [
                         {
@@ -33,7 +33,7 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: '_2',
+                    avatar: '_14',
                     visible: true,
                     messages: [
                         {
@@ -55,7 +55,7 @@ createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar: '_3',
+                    avatar: '_16',
                     visible: true,
                     messages: [
                         {
@@ -76,8 +76,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro B.',
-                    avatar: '_4',
+                    name: 'Alessandra B.',
+                    avatar: '_9',
                     visible: true,
                     messages: [
                         {
@@ -93,8 +93,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro L.',
-                    avatar: '_5',
+                    name: 'Valeria L.',
+                    avatar: '_10',
                     visible: true,
                     messages: [
                         {
@@ -111,7 +111,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: '_6',
+                    avatar: '_11',
                     visible: true,
                     messages: [
                         {
@@ -132,8 +132,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Federico',
-                    avatar: '_7',
+                    name: 'Federica',
+                    avatar: '_12',
                     visible: true,
                     messages: [
                         {
@@ -150,7 +150,7 @@ createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: '_8',
+                    avatar: '_13',
                     visible: true,
                     messages: [
                         {
@@ -176,7 +176,7 @@ createApp({
     },
 
     methods: {
-        
+
   activeCoversation(index) {
       this.activeIndex = index;
 

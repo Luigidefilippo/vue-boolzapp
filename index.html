@@ -19,7 +19,7 @@
         <div class="sidebar">
             <div class="avatar-top">
                 <div class="avatar">
-                    <img src="img/avatar_1.jpg" alt="fotoprofilo">
+                    <img src="img/avatar_16.png" alt="fotoprofilo">
                 </div>
                 <span class="span-sidebar">Luigi De Filippo</span>
                 <div class="chat-header-right">
@@ -51,9 +51,11 @@
             <div class="chats-sidebar">
                 <template v-for="(contact, index) in contacts">
                 <div class="contact-chat" @click="activeCoversation(index)" v-if="contact.visible == true">
+
                     <div class="chat-avatar">
                         <img :src="contact.avatar" alt="">
                     </div>
+
                     <div class="chat-info">
                         <h4>{{ contact.name }}</h4>
                         <p>Ultimo accesso 03/03/2022</p>
