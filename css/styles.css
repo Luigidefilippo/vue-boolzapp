@@ -245,4 +245,28 @@ i{
   color: green;
 }
 
+/* DELETE MESSAGE AND INFO */
 
+.hidden-menu{
+    top: 50px;
+    padding: 5px;
+    z-index: 1000;
+    border-radius: 7px;
+}
+
+.hidden-menu p{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hidden-menu p:first-child{
+    border-radius: 7px 7px 0 0;
+}
+
+.hidden-menu p:last-child{
+    border-radius: 0 0 7px 7px;
+}
+
+.hidden-menu p:hover{
+    background-color: #e9eaeb;
+}
