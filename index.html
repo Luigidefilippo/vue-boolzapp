@@ -21,7 +21,7 @@
                 <div class="avatar">
                     <img src="img/avatar_16.png" alt="fotoprofilo">
                 </div>
-                <span class="span-sidebar">Luigi De Filippo</span>
+                <span class="span-sidebar">Luigi De Filippo</span><span class="user-status"><i class="fa-solid fa-circle"></i></span>
                 <div class="chat-header-right">
                     <i class="fa-solid fa-circle-notch"></i>
                     <i class="fa-solid fa-message"></i>
@@ -97,7 +97,7 @@
             <!-- CHAT FOOTER -->
             <div class="chat-footer">
                 <i class="fa-solid fa-face-laugh-beam"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input  type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage">
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>

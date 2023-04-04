@@ -240,5 +240,7 @@ i{
   margin-bottom: 30px;
 }
 
-
-
+.user-status{
+  padding: 10px;
+  color: green;
+}

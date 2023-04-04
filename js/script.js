@@ -6,6 +6,8 @@ createApp({
         return{
             activeIndex: 0,
             searchContact: '',
+            newMessage: '',
+            timeMessage: DateTime.now().setLocale('it').toFormat('hh mm'),
             
 
 
@@ -112,7 +114,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
+                    name: 'Anto',
                     avatar: '_11',
                     visible: true,
                     messages: [
@@ -192,6 +194,37 @@ createApp({
             element.visible = false;
           }
         });
+      },
+
+
+      sendMessage() {
+        this.contacts[this.activeIndex].messages.push(
+          {
+            hour: this.timeMessage,
+            message: this.newMessage,
+            status: 'received',
+          }
+        )
+  
+        setTimeout(
+          () => {
+  
+            this.contacts[this.activeIndex].messages.push(
+              {
+                hour: this.timeMessage,
+                message: 'ok',
+                status: 'sent',
+              }
+            )
+  
+          }, 2000
+        );
+  
+        this.newMessage = ''
+  
+  
+  
+  
       },
 
     },
