@@ -16,7 +16,7 @@ createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: '_15',
+                    avatar: 'avatr_15.png',
                     visible: true,
                     messages: [
                         {
@@ -38,7 +38,7 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: '_14',
+                    avatar: 'avatar_14.png',
                     visible: true,
                     messages: [
                         {
@@ -60,7 +60,7 @@ createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar: '_16',
+                    avatar: 'avatar_16.png',
                     visible: true,
                     messages: [
                         {
@@ -82,7 +82,7 @@ createApp({
                 },
                 {
                     name: 'Alessandra B.',
-                    avatar: '_9',
+                    avatar: 'avatar_9.png',
                     visible: true,
                     messages: [
                         {
@@ -99,7 +99,7 @@ createApp({
                 },
                 {
                     name: 'Valeria L.',
-                    avatar: '_10',
+                    avatar: 'avatar_10.png',
                     visible: true,
                     messages: [
                         {
@@ -116,7 +116,7 @@ createApp({
                 },
                 {
                     name: 'Anto',
-                    avatar: '_11',
+                    avatar: 'avatar_11.png',
                     visible: true,
                     messages: [
                         {
@@ -138,7 +138,7 @@ createApp({
                 },
                 {
                     name: 'Federica',
-                    avatar: '_12',
+                    avatar: 'avatar_12.png',
                     visible: true,
                     messages: [
                         {
@@ -155,7 +155,7 @@ createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: '_13',
+                    avatar: 'avatar_13.png',
                     visible: true,
                     messages: [
                         {
@@ -229,7 +229,9 @@ createApp({
       },
 
 
-
+      deleteMessage: function(index, activeIndex){
+        this.contacts[activetIndex].messages.splice(index, 1);
+    },
 
     },
 }).mount("#app")
