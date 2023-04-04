@@ -56,6 +56,7 @@
                         <img :src="contact.avatar" alt="">
                     </div>
 
+
                     <div class="chat-info">
                         <h4>{{ contact.name }}</h4>
                         <p>Ultimo accesso 03/03/2022</p>
@@ -88,6 +89,14 @@
                 <div v-for="message in contacts[activeIndex].messages">
                     <div :class="message.status">
                         <span>{{message.message}}</span> 
+                        <div class="hidden-menu" v-if="message.submenu === true">
+                            <p>Message info</p>
+                            <p @click="deleteMessage(index, currentIndex)">Delete message</p>
+                        </div>
+                        <div class="message-text">
+                            <p>{{message.text}}</p>
+                            <i class="fas fa-angle-down" @click="message.submenu=!message.submenu"></i>
+                        </div>
                     
                         <span class="chat-time-messagge">{{message.hour}}</span> 
                     </div>
@@ -102,7 +111,16 @@
             </div>
         </div>
 
+
+
+        
+
+
+
+
     </div>
+
+
 
 
 

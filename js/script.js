@@ -7,7 +7,8 @@ createApp({
             activeIndex: 0,
             searchContact: '',
             newMessage: '',
-            timeMessage: DateTime.now().setLocale('it').toFormat('hh mm'),
+            timeMessage: DateTime.now().setLocale('it').toFormat('dd/MM/yy HH:mm:ss') ,
+            
             
 
 
@@ -226,6 +227,9 @@ createApp({
   
   
       },
+
+
+
 
     },
 }).mount("#app")
